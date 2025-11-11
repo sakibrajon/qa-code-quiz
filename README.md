@@ -1,12 +1,86 @@
-# QA Testing Quiz
 
-### Scenario
-The frontend team has developed a prototype login portal for an up and coming platform.
-However, they have not implemented any testing yet and it is up to you to do so.
+# QA Code Quiz Project
 
-As the QA developer, what is tested and how it is tested is up to you.
-Management simply asks that these tests provide as much evidence as possible of the platform's reliability.
+This repository contains the QA test project including **Jest unit tests** and **Cypress end-to-end tests** for the Login page.
 
-### Notes
-- Submission must include a link to a public fork/clone of this repository
-- We typically use Jest for testing node.js/API related logic and Cypress for testing UI functionality, however, you are more than welcome to use any testing framework you desire so long as you are able to provide reasonable justification
+---
+
+## Project Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sakibrajon/qa-code-quiz.git
+cd qa-code-quiz
+````
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+Server will run at [http://localhost:8080](http://localhost:8080).
+
+---
+
+## Running Tests
+
+### Unit Tests (Jest)
+
+Run unit tests:
+
+```bash
+npm run test:unit
+```
+
+**Example Output:**
+
+```bash
+ PASS  ./login.test.js
+  Login API Logic Tests
+    √ Valid login returns success (4ms)
+    √ Empty username and password returns error (1ms)
+    √ Invalid login returns error
+    √ Empty username returns error (1ms)
+    √ Empty password returns error
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+```
+
+### End-to-End Tests (Cypress)
+
+Run Cypress tests:
+
+```bash
+npm run test:end-to-end
+```
+
+**Example Output (if tests fail):**
+
+```bash
+Login Page QA Test
+  Page loads correctly      failed
+  Empty login shows error   failed
+  Invalid login shows error failed
+  Valid login works         failed
+```
+
+> ⚠ Note: Currently the provided login page test data may fail, as these tests are for demonstration purposes only.
+
+---
+
+## Author
+
+**Md Sakibuzzaman**
+Email: [sakib.iict.kuet@gmail.com](mailto:sakib.iict.kuet@gmail.com)
+GitHub: [https://github.com/sakibrajon](https://github.com/sakibrajon)
+
+```
